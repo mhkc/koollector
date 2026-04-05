@@ -7,6 +7,7 @@ requires-python = ">=3.13"
 dependencies = [
     "click>=8.3.1",
     "docling>=2.82.0",
+    "pydantic-settings>=2.13.1",
     "pypaperless>=5.2.2",
 ]
 
