@@ -92,18 +92,18 @@ class Settings(BaseSettings):
 
 BUILTIN_PRESETS = {
     "markdown": Preset(
-        source=FileSystemSource(...),
+        source=FileSystemSource(),
         convert=ConvertConfig(output_format="markdown"),
-        output=OutputConfig(...)
+        output=OutputConfig()
     ),
     "text": Preset(
-        source=FileSystemSource(...),
+        source=FileSystemSource(),
         convert=ConvertConfig(output_format="text"),
-        output=OutputConfig(...)
+        output=OutputConfig()
     ),
     "html": Preset(
-        source=FileSystemSource(...),
+        source=FileSystemSource(),
         convert=ConvertConfig(output_format="html"),
-        output=OutputConfig(...)
+        output=OutputConfig()
     ),
 }
