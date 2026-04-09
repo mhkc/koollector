@@ -35,8 +35,10 @@ def convert_document(
         result = convert(source, output_format=output_format)
     except Exception as exc:
         LOG.error("Failed to convert document: %s", exc)
+        raise
 
     output_path = make_output_path(
         preset, dir_override=output_dir_override, source=source
     )
+    import pdb; pdb.set_trace()
     write_output(output_path, result)
