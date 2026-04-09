@@ -39,6 +39,11 @@ def setup_logging(verbose: bool = False) -> None:
     else:
         formatter = logging.Formatter("%(levelname)s: %(message)s")
 
+        # silence the output of docling unless using verbose setting
+        logging.getLogger("docling").setLevel(logging.WARNING)
+        logging.getLogger("docling_core").setLevel(logging.WARNING)
+        logging.getLogger("RapidOCR").setLevel(logging.WARNING)
+
     handler.setFormatter(formatter)
 
     root.setLevel(level)

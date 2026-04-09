@@ -4,7 +4,6 @@ import logging
 
 import click
 
-from koollector.core.pipeline import convert_document
 from koollector.core.settings import OutputFormat
 
 from .common import load_settings, resolve_conversion_config
@@ -44,6 +43,7 @@ LOG = logging.getLogger(__name__)
 @click.argument("sources", nargs=-1, type=click.Path(exists=True))
 def convert_documents(config_file, output_format, output_dir, preset_name: str, sources: str):
     """Convert documents based on the specified profile."""
+    from koollector.core.pipeline import convert_document
 
     LOG.info("Using configuration file: %s", config_file)
     LOG.info("Profile: %s", preset_name)
